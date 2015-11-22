@@ -1,0 +1,23 @@
+{
+	"name": "Seafoam", 
+	"color_fade_delay" : 0.1,
+	"color_cycle_delay" : 5,
+	"colors": 
+	[
+		{
+			"red": 25, 
+			"blue": 25, 
+			"green": 0
+		},
+		{
+			"red": 25, 
+			"blue": 75, 
+			"green": 0
+		},
+		{
+			"red": 0,
+			"blue": 25,
+			"green": 75
+		}
+	]
+}

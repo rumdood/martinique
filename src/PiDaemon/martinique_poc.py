@@ -1,0 +1,26 @@
+import json
+from mock_rgb_strip import mock_rgb_strip
+from color_fade_engine import color_fade_engine
+from color_fade_manager import color_fade_manager
+from color_sequence import color_sequence
+from rgb_light_color import rgb_light_color
+
+class martinique_poc(object):
+	
+	def run():
+		with open('gpio_settings.json') as gpio_settings:
+			gpio = json.load(gpio_settings)
+			
+		with open('seafoam_sequence.json') as seafoam_file:
+			seafoam = json.load(seafoam_file)
+			
+		seq = color_sequence.load_from_json(seafoam)
+		
+		with mock_rgb_strip(gpio['led_pins'], gpio['led_frequency']) as strip:
+			print("I'm going to create and run a sequence now")
+			engine = color_fade_engine(strip)
+			mgr = color_fade_manager(engine)
+			mgr.run_sequence(seq, 5)
+		
+		
+		print('FDF')

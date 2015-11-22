@@ -1,0 +1,10 @@
+{
+  "led_pins" : {
+    "red" : 17,
+    "green" : 22,
+    "blue" : 24
+  },
+  "led_frequency" : 100,
+  "color_cycle_delay" : 0.1,
+  "color_fade_delay" : 0.1
+}
