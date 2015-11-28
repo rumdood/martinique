@@ -42,6 +42,7 @@ class color_fade_engine(object):
 			print('Target Color Reached')
 			return;
 		
+		print('--> Calculating new current color...')
 		# I'm sure there's a better way to do this next bit...
 		if (self.__current_color.red < target_color.red):
 			self.__current_color.red = self.__current_color.red + 1
@@ -55,7 +56,8 @@ class color_fade_engine(object):
 			self.__current_color.blue = self.__current_color.blue + 1
 		elif (self.__current_color.blue > target_color.blue):
 			self.__current_color.blue = self.__current_color.blue - 1
-	
+		
+		print('--> Setting color')		
 		self.__rgb_strip.set_color(self.__current_color.red, 
 			self.__current_color.green, 
 			self.__current_color.blue, step_delay)

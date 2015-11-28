@@ -23,8 +23,8 @@ class martinique_poc(object):
 			mgr = color_fade_manager(engine)
 			mgr.run_sequence(seq, 
 				2, 
-				seq.color_fade_delay, 
-				seq.color_cycle_delay)
+				0.1, 
+				5)
 		
 		
 		print('FDF')
