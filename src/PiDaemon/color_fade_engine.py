@@ -35,6 +35,7 @@ class color_fade_engine(object):
 			target_color.blue = 0
 		
 		if (self.__current_color == target_color):
+			print('Target Color Reached')
 			return;
 		
 		# I'm sure there's a better way to do this next bit...
