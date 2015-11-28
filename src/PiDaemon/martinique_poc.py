@@ -21,11 +21,10 @@ class martinique_poc(object):
 			print("I'm going to create and run a sequence now")
 			engine = color_fade_engine(strip)
 			mgr = color_fade_manager(engine)
-			mgr.run_sequence(sequence=seq, 
-				max_loops=2, 
-				fade_delay=seq.color_fade_delay, 
-				color_pause=seq.color_cycle_delay,
-				state_dict=mDict)
+			mgr.run_sequence(seq, 
+				2, 
+				seq.color_fade_delay, 
+				seq.color_cycle_delay)
 		
 		
 		print('FDF')
