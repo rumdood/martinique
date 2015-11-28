@@ -29,9 +29,7 @@ class color_fade_manager(object):
 			state_dict["RUNNING"] = True
 			
 			target_color = sequence.get_next_color()
-			print('Fading To Color')
 			self.__engine.fade_to_color(target_color, fade_delay)
-			print('Color Fade Complete')
 			time.sleep(color_pause)
 			
 			if (max_loops > 0):

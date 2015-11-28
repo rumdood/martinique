@@ -16,12 +16,11 @@ class mock_rgb_strip(object):
 		self.cleanup()
 		return True
 	
-	def set_color(self, red, green, blue, post_delay):
+	def set_color(self, red, green, blue):
 		self.__pins['RED'] = red
 		self.__pins['GREEN'] = green
 		self.__pins['BLUE'] = blue
 		print('R: %s G: %s B: %s' % (red, green, blue))
-		time.sleep(post_delay)
 		
 	def cleanup(self):
 		self.__pins['RED'] = -1

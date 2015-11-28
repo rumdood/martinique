@@ -23,11 +23,10 @@ class rgb_strip(object):
 		self.cleanup()
 		return True
 	
-	def set_color(self, red, green, blue, post_delay):
+	def set_color(self, red, green, blue):
 		self.__pins['RED'].ChangeDutyCycle(red)
 		self.__pins['GREEN'].ChangeDutyCycle(green)
 		self.__pins['BLUE'].ChangeDutyCycle(blue)
-		#time.sleep(post_delay)
 		
 	def cleanup(self):
 		for color, pin in self.__pins.items():

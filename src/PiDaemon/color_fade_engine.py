@@ -19,8 +19,8 @@ class color_fade_engine(object):
 		
 	def fade_to_color(self, target_color, step_delay):
 	
-		print('Current Color: %s %s %s' % (self.__current_color.red, self.__current_color.green, self.__current_color.blue))
-		print('Target Color: %s %s %s' % (target_color.red, target_color.green, target_color.blue))
+		#print('Current Color: %s %s %s' % (self.__current_color.red, self.__current_color.green, self.__current_color.blue))
+		#print('Target Color: %s %s %s' % (target_color.red, target_color.green, target_color.blue))
 	
 		# don't let anyone set an out of bounds value
 		if (target_color.red > 100):
@@ -39,10 +39,10 @@ class color_fade_engine(object):
 			target_color.blue = 0
 		
 		if (self.__current_color == target_color):
-			print('Target Color Reached')
+			#print('Target Color Reached')
 			return;
 		
-		print('--> Calculating new current color...')
+		#print('--> Calculating new current color...')
 		# I'm sure there's a better way to do this next bit...
 		if (self.__current_color.red < target_color.red):
 			self.__current_color.red = self.__current_color.red + 1
@@ -57,10 +57,10 @@ class color_fade_engine(object):
 		elif (self.__current_color.blue > target_color.blue):
 			self.__current_color.blue = self.__current_color.blue - 1
 		
-		print('--> Setting color')		
+		#print('--> Setting color')		
 		self.__rgb_strip.set_color(self.__current_color.red, 
 			self.__current_color.green, 
-			self.__current_color.blue, step_delay)
+			self.__current_color.blue)
 			
 		time.sleep(step_delay)
 			
