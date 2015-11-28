@@ -7,6 +7,7 @@ from rgb_light_color import rgb_light_color
 
 class martinique_poc(object):
 	
+	@staticmethod
 	def run():
 		with open('gpio_settings.json') as gpio_settings:
 			gpio = json.load(gpio_settings)

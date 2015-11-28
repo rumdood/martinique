@@ -18,7 +18,8 @@ class color_sequence:
 		
 	def add_color(self, color):
 		self.colors.append(color)
-		
+	
+	@staticmethod	
 	def load_from_json(json_object):
 		if 'name' not in json_object:
 			return None

@@ -1,3 +1,4 @@
 {
+	"http-port" : 8477,
 	"default-sequence-file" : "seafoam_sequence.json"
 }

@@ -68,6 +68,10 @@ def do_stop():
 	return stop_process_loop()
 	
 if (__name__ == '__main__'):
+	
+	with open('local_settings.json') as local_file:
+		settings = json.load(local_file)
+		
 	_processManager = Manager()
 	_stateDict = _processManager.dict()
-	app.run(host="0.0.0.0",port=8477)
+	app.run(host="0.0.0.0",port=settings['http-port'])
