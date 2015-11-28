@@ -1,4 +1,5 @@
 {
 	"http-port" : 8477,
+	"debug-flag": "True",
 	"default-sequence-file" : "seafoam_sequence.json"
 }
