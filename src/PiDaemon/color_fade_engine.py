@@ -62,4 +62,6 @@ class color_fade_engine(object):
 			self.__current_color.green, 
 			self.__current_color.blue, step_delay)
 			
+		time.sleep(step_delay)
+			
 		return self.fade_to_color(target_color,	step_delay)
