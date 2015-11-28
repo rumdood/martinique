@@ -35,5 +35,11 @@ class color_fade_manager(object):
 			if (max_loops > 0):
 				loop_count = loop_count + 1
 				
+		if (not state_dict["READY"]):
+			target_color.red = 0
+			target_color.green = 0
+			target_color.blue = 0
+			self.__engine.fade_to_color(target_color, fade_delay)
+				
 		state_dict["RUNNING"] = False
 		state_dict["READY"] = True		
