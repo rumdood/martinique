@@ -18,6 +18,9 @@ class color_fade_engine(object):
 		return True
 		
 	def fade_to_color(self, target_color, step_delay):
+	
+		print('Current Color: %s %s %s' % [self.__current_color.red, self.__current_color.green, self.__current_color.blue])
+	
 		# don't let anyone set an out of bounds value
 		if (target_color.red > 100):
 			target_color.red = 100

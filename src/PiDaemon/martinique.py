@@ -28,11 +28,11 @@ def run_loop(mDict):
 		
 		engine = color_fade_engine(strip)
 		mgr = color_fade_manager(engine)
-		mgr.run_sequence(seq, 
-			0, 
-			seq.color_fade_delay, 
-			seq.color_cycle_delay,
-			mDict)
+		mgr.run_sequence(sequence=seq, 
+			max_loops=0, 
+			fade_delay=seq.color_fade_delay, 
+			color_pause=seq.color_cycle_delay,
+			state_dict=mDict)
 		
 def spawn_process_loop():
 	if (__name__ == '__main__'):
