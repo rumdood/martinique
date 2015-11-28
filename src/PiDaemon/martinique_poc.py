@@ -1,5 +1,5 @@
 import json
-from mock_rgb_strip import mock_rgb_strip
+from rgb_strip import rgb_strip
 from color_fade_engine import color_fade_engine
 from color_fade_manager import color_fade_manager
 from color_sequence import color_sequence
