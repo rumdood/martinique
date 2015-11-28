@@ -17,11 +17,15 @@ class martinique_poc(object):
 			
 		seq = color_sequence.load_from_json(seafoam)
 		
-		with mock_rgb_strip(gpio['led_pins'], gpio['led_frequency']) as strip:
+		with rgb_strip(gpio['led_pins'], gpio['led_frequency']) as strip:
 			print("I'm going to create and run a sequence now")
 			engine = color_fade_engine(strip)
 			mgr = color_fade_manager(engine)
-			mgr.run_sequence(seq, 5)
+			mgr.run_sequence(sequence=seq, 
+				max_loops=2, 
+				fade_delay=seq.color_fade_delay, 
+				color_pause=seq.color_cycle_delay,
+				state_dict=mDict)
 		
 		
 		print('FDF')
