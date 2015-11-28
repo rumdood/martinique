@@ -6,4 +6,6 @@ class rgb_light_color(object):
 		self.blue = blue
 	
 	def __eq__(self, other): 
-        	return self.__dict__ == other.__dict__
+        	return (self.red == other.red
+				and self.green == other.green
+				and self.blue == other.blue)
