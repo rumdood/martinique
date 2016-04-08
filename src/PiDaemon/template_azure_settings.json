@@ -1,0 +1,18 @@
+/*
+TEMPLATE FILE
+
+Copy this file to azure_settings.json and put your azure information in the proper spots.
+auzre_settings.json is already in .gitignore
+*/
+{
+  "storage" : {
+    "storage_account_name" : "",
+    "storage_account_key" : ""
+  },
+ "service_bus" : {
+    "name_space" : "[azure service bus namespace]",
+    "key_name" : "[asb key name]",
+    "key_value" : "[asb key value]",
+    "queue_name" : "[asb queue name]"
+  }  
+}   
