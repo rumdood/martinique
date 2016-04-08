@@ -6,7 +6,7 @@ __pycache__/
 *.so
 
 # project specific
-azure_settings.json
+#azure_settings.json
 
 # Distribution / packaging
 .Python
