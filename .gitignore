@@ -5,6 +5,9 @@ __pycache__/
 # C extensions
 *.so
 
+# project specific
+azure_settings.json
+
 # Distribution / packaging
 .Python
 env/
