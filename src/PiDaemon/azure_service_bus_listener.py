@@ -18,10 +18,10 @@ class azure_service_bus_listener(object):
         
         if (message.body == None):
             print("No Message Received")
-            on_timeout_target(self)
+            on_timeout_target()
         else:
             message_string = message.body.decode('utf-8')
-            on_receive_target(self, message_string)
+            on_receive_target(message_string)
 		
     def create_queue(self):
         q_opt = Queue()
