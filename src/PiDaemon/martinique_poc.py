@@ -8,7 +8,6 @@ from color_sequence_manager import color_sequence_manager
 from color_sequence_request import color_sequence_request
 from color_sequence import color_sequence
 from rgb_light_color import rgb_light_color
-
 from multiprocessing import Process, Queue, JoinableQueue
 
 def get_default_sequence(settings):
