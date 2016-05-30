@@ -17,7 +17,7 @@ class azure_service_bus_listener(object):
         message = self.bus_service.receive_queue_message(self.queue_name, peek_lock=False)
         
         if (message.body == None):
-            print("No Message Received")
+            print("[ASB_Listener]: No Message Received")
             on_timeout_target()
         else:
             message_string = message.body.decode('utf-8')

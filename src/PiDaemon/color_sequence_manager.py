@@ -1,3 +1,5 @@
+import os
+import sys
 import time
 from multiprocessing import Process, Queue, JoinableQueue
 from queue import Empty
@@ -12,6 +14,7 @@ class color_sequence_manager(Process):
         self.__engine = fade_engine
         self.__current_sequence = None
         self.__black = rgb_light_color(0,0,0)
+        self.__keepRunning = True
         
     def check_queue(self):
         if (not self.__sequence_queue.empty()):
@@ -24,8 +27,19 @@ class color_sequence_manager(Process):
         return None
         
     def run(self):
+        try:
+            self.process_messages()
+        except KeyboardInterrupt:
+            print("[Color_Sequence_Manager]: I've been interrupted'")
+            self.__keepRunning = False
+            try:
+                sys.exit(0)
+            except SystemExit:
+                os._exit(0)
+        
+    def process_messages(self):
         proc_name = self.name
-        while (True):
+        while (self.__keepRunning):
             request = self.check_queue()   
             if (request is None):
                 if (self.__current_sequence is None):
