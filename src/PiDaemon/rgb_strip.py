@@ -28,6 +28,8 @@ class rgb_strip(object):
 		self.__pins['GREEN'].ChangeDutyCycle(green)
 		self.__pins['BLUE'].ChangeDutyCycle(blue)
 		
+		print('[RGB]: R: %s G: %s B: %s' % (red, green, blue))
+		
 	def cleanup(self):
 		for color, pin in self.__pins.items():
 			pin.stop()
