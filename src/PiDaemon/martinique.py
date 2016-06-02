@@ -26,8 +26,8 @@ def main():
     # get all the GPIO stuff done and create the engine
     gpio = get_gpio()
     settings = get_settings()
-    rgb_strip = rgb_strip(gpio['led_pins'], gpio['led_frequency'])
-    engine = color_fade_engine(rgb_strip)
+    light_strip = rgb_strip(gpio['led_pins'], gpio['led_frequency'])
+    engine = color_fade_engine(light_strip)
     
     color_mgr = color_sequence_manager(sequence_queue, engine)
     
