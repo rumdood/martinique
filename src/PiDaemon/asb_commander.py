@@ -33,6 +33,7 @@ def get_sequence(sequence_file_name):
 parser = argparse.ArgumentParser(description="Start/Stop/Shutdown Martinique via ASB")
 parser.add_argument("-stop", action="store_true", help="Stops the current sequence")
 parser.add_argument("-start", action="store_true", help="Starts the specified sequence")
+parser.add_argument("-shutdown", action="store_true", help="Shuts down running Martinique process")
 parser.add_argument("sequence", nargs="?", default=None, help="The sequence json file you want to run")
 
 args = parser.parse_args()
@@ -52,12 +53,15 @@ if (args.start):
         sequence_data = get_sequence(args.sequence)
         print("Requesting Sequence: %s" % sequence_data.name)
         msgData = json.dumps(sequence_data, cls=ComplexJSONEncoder)
-        qMessage = Message(str.encode(msgData))
-        bus_service.send_queue_message(queue_name, qMessage)
     else:
         print("No sequence specified. Please specify a sequence to start.")
+        return
 elif (args.stop):
     print("Requesting sequence stop")
     msgData = "STOP"
-    qMessage = Message(str.encode(msgData))
-    bus_service.send_queue_message(queue_name, qMessage)
+elif (args.shutdown):
+    print("Requesting shutdown")
+    msgData = "SHUTDOWN"
+    
+qMessage = Message(str.encode(msgData))
+bus_service.send_queue_message(queue_name, qMessage)
