@@ -1,0 +1,5 @@
+D:\Projects\martinique\src\Web\MartiniqueWeb\Martinique.Common\bin\Debug\Martinique.Common.dll
+D:\Projects\martinique\src\Web\MartiniqueWeb\Martinique.Common\bin\Debug\Martinique.Common.pdb
+D:\Projects\martinique\src\Web\MartiniqueWeb\Martinique.Common\obj\Debug\Martinique.Common.csprojResolveAssemblyReference.cache
+D:\Projects\martinique\src\Web\MartiniqueWeb\Martinique.Common\obj\Debug\Martinique.Common.dll
+D:\Projects\martinique\src\Web\MartiniqueWeb\Martinique.Common\obj\Debug\Martinique.Common.pdb

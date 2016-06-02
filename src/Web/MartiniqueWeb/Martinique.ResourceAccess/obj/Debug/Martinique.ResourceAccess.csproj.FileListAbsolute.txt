@@ -1,0 +1,7 @@
+D:\Projects\martinique\src\Web\MartiniqueWeb\Martinique.ResourceAccess\bin\Debug\Martinique.ResourceAccess.dll
+D:\Projects\martinique\src\Web\MartiniqueWeb\Martinique.ResourceAccess\bin\Debug\Martinique.ResourceAccess.pdb
+D:\Projects\martinique\src\Web\MartiniqueWeb\Martinique.ResourceAccess\bin\Debug\Martinique.Common.dll
+D:\Projects\martinique\src\Web\MartiniqueWeb\Martinique.ResourceAccess\bin\Debug\Martinique.Common.pdb
+D:\Projects\martinique\src\Web\MartiniqueWeb\Martinique.ResourceAccess\obj\Debug\Martinique.ResourceAccess.csprojResolveAssemblyReference.cache
+D:\Projects\martinique\src\Web\MartiniqueWeb\Martinique.ResourceAccess\obj\Debug\Martinique.ResourceAccess.dll
+D:\Projects\martinique\src\Web\MartiniqueWeb\Martinique.ResourceAccess\obj\Debug\Martinique.ResourceAccess.pdb

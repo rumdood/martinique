@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MartiniqueWeb", "MartiniqueWeb\MartiniqueWeb.csproj", "{DA0F1D0A-D0C1-4BAE-91E8-FB55C01F2F5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MartiniqueWeb.Tests", "MartiniqueWeb.Tests\MartiniqueWeb.Tests.csproj", "{296D49F7-7A8C-47EB-B229-67011DBFEBFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{D499DF1C-5AA3-465D-A7C0-374AEE905D54}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{5F1642C2-1841-4D5E-9F6E-8ED3A07B641E}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1 = PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{B69A1294-9135-4F6A-B424-959FC3D2F18B}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Templates\MartiniqueWeb.json = PublishScripts\Templates\MartiniqueWeb.json
+		PublishScripts\Templates\MartiniqueWeb.param.dev.json = PublishScripts\Templates\MartiniqueWeb.param.dev.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Martinique.Managers", "Martinique.Managers\Martinique.Managers.csproj", "{2B72B6EE-2652-4E50-9E18-A3C215E0E5FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Martinique.Common", "Martinique.Common\Martinique.Common.csproj", "{A8449FEF-1CF2-44A1-89A7-211381DF27E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Martinique.ResourceAccess", "Martinique.ResourceAccess\Martinique.ResourceAccess.csproj", "{5C7CA7F5-CB76-43EB-A1A8-012B2139DF2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA0F1D0A-D0C1-4BAE-91E8-FB55C01F2F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA0F1D0A-D0C1-4BAE-91E8-FB55C01F2F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA0F1D0A-D0C1-4BAE-91E8-FB55C01F2F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA0F1D0A-D0C1-4BAE-91E8-FB55C01F2F5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{296D49F7-7A8C-47EB-B229-67011DBFEBFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{296D49F7-7A8C-47EB-B229-67011DBFEBFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{296D49F7-7A8C-47EB-B229-67011DBFEBFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{296D49F7-7A8C-47EB-B229-67011DBFEBFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B72B6EE-2652-4E50-9E18-A3C215E0E5FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B72B6EE-2652-4E50-9E18-A3C215E0E5FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B72B6EE-2652-4E50-9E18-A3C215E0E5FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B72B6EE-2652-4E50-9E18-A3C215E0E5FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8449FEF-1CF2-44A1-89A7-211381DF27E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8449FEF-1CF2-44A1-89A7-211381DF27E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8449FEF-1CF2-44A1-89A7-211381DF27E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8449FEF-1CF2-44A1-89A7-211381DF27E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C7CA7F5-CB76-43EB-A1A8-012B2139DF2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C7CA7F5-CB76-43EB-A1A8-012B2139DF2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C7CA7F5-CB76-43EB-A1A8-012B2139DF2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C7CA7F5-CB76-43EB-A1A8-012B2139DF2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5F1642C2-1841-4D5E-9F6E-8ED3A07B641E} = {D499DF1C-5AA3-465D-A7C0-374AEE905D54}
+		{B69A1294-9135-4F6A-B424-959FC3D2F18B} = {D499DF1C-5AA3-465D-A7C0-374AEE905D54}
+	EndGlobalSection
+EndGlobal
