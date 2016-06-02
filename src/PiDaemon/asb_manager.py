@@ -1,3 +1,4 @@
+from datetime import datetime
 import json
 from multiprocessing import Process, Queue, JoinableQueue
 from azure_service_bus_listener import azure_service_bus_listener
@@ -10,15 +11,11 @@ class asb_manager(Process):
         Process.__init__(self)
         self.__bus_listener = None
         self.__request_queue = request_queue
-        self.__firstRun = True
+        self.__keepRunning = True
 
     #@staticmethod
     def timeout_expired(self):
         print("[ASB_MGR]: Queue Read Timeout")
-        
-        self.__bus_listener.wait_for_message(
-            self.on_message_receive, 
-            self.timeout_expired)
     
     #@staticmethod    
     def on_message_receive(self, message):
@@ -30,6 +27,8 @@ class asb_manager(Process):
             poison_request = color_sequence_request(None, None)
             self.__request_queue.put(poison_request)
             self.__request_queue.join()
+            
+            self.__keepRunning = False
             return
             
         if (message != 'STOP'):
@@ -44,20 +43,23 @@ class asb_manager(Process):
         if (sequence_request != None):
             self.__request_queue.put(sequence_request)
             self.__request_queue.join()
-        
-        self.__bus_listener.wait_for_message(
-            self.on_message_receive, 
-            self.timeout_expired)
             
     def run(self):      
         with open('azure_settings.json') as azure_settings_file:
             azure_settings = json.load(azure_settings_file)
         
-        print("[ASB_MGR]: Begin Wait For Message")
         self.__bus_listener = azure_service_bus_listener(azure_settings['service_bus'])
         
         try:
-            self.__bus_listener.wait_for_message(self.on_message_receive, 
-                self.timeout_expired)
+            #self.__bus_listener.wait_for_message(self.on_message_receive, 
+            #    self.timeout_expired)
+                
+            while (self.__keepRunning):
+                print("[ASB_MGR]: {{WAIT FOR MESSAGE}}")
+                self.__bus_listener.wait_for_message(
+                    self.on_message_receive, 
+                    self.timeout_expired)
         except KeyboardInterrupt:
             return
+        except:
+            print("[ASB_MGR]: Something went wrong and I died at %s" % datetime.now())

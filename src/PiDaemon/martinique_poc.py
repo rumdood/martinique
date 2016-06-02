@@ -3,7 +3,6 @@ import time
 from asb_manager import asb_manager
 from mock_rgb_strip import mock_rgb_strip
 from color_fade_engine import color_fade_engine
-from color_fade_manager import color_fade_manager
 from color_sequence_manager import color_sequence_manager
 from color_sequence_request import color_sequence_request
 from color_sequence import color_sequence
