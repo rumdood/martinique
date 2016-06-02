@@ -39,3 +39,13 @@ def main():
     asbmgr.start()
     
     print("[Martinique]: Running...")
+    
+if (__name__ == '__main__'):
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("[KEYBOARD INTERRUPT DETECTED]")
+        try:
+            sys.exit(0)
+        except SystemExit:
+            os._exit(0)
